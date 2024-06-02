@@ -2,17 +2,21 @@ import React from "react";
 import Products from "../Components/Products";
 import Categories from "../Components/Categories";
 
+// HomePage component
 const HomePage = () => {
   return (
     <>
+      {/* Grid layout for displaying promotional images */}
       <div className="grid grid-cols-4 gap-5 p-5">
+        {/* Individual promotional image with link */}
         <div className=" relative col-span-1 row-span-1">
+          {/* Image */}
           <img
             src="https://i5.walmartimages.com/dfw/4ff9c6c9-6a1f/k2-_36b8f1d4-15b4-4a13-b65e-bc757439eaff.v1.jpg?odnHeight=256&odnWidth=385&odnBg=&odnDynImageQuality=70"
             alt=""
             className=" rounded-3xl"
           />
-
+          {/* Overlay text */}
           <div className="absolute top-10 text-white ps-5">
             <h3 className=" font-bold text-xl pb-3">
               Splash zone: pools & <br /> beynd
@@ -81,7 +85,7 @@ const HomePage = () => {
 
           <div className="absolute top-10 text-black  ps-5">
             <h3 className=" font-bold text-2xl pb-3">
-             Affordable <br /> outdoor lighting
+              Affordable <br /> outdoor lighting
             </h3>
             <a href="/" className="text-sm underline">
               Shop now
@@ -112,9 +116,7 @@ const HomePage = () => {
           />
 
           <div className="absolute top-10 text-black  ps-5">
-            <h3 className=" font-bold text-2xl pb-3">
-              Save up to 65%
-            </h3>
+            <h3 className=" font-bold text-2xl pb-3">Save up to 65%</h3>
             <a href="/" className="text-sm underline">
               Shop now
             </a>
@@ -128,9 +130,7 @@ const HomePage = () => {
           />
 
           <div className="absolute top-10 text-black  ps-5">
-            <h3 className=" font-bold text-2xl pb-3">
-              Fire up the grill
-            </h3>
+            <h3 className=" font-bold text-2xl pb-3">Fire up the grill</h3>
             <a href="/" className="text-sm underline">
               Shop now
             </a>
@@ -144,9 +144,7 @@ const HomePage = () => {
           />
 
           <div className="absolute top-10 text-white  ps-5">
-            <h3 className=" font-bold text-2xl pb-3">
-              Set the table in style
-            </h3>
+            <h3 className=" font-bold text-2xl pb-3">Set the table in style</h3>
             <a href="/" className="text-sm underline">
               Shop dining
             </a>
@@ -170,9 +168,11 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <Categories/>
-      <Products/>
-   
+
+      {/* Render the Categories component */}
+      <Categories />
+      {/* Render the Products component */}
+      <Products />
     </>
   );
 };

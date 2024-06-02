@@ -9,18 +9,24 @@ import SignIn from "./Pages/SignIn";
 import { useState } from "react";
 
 function App() {
-  const [users, setUsers] = useState(false);
+  const [users, setUsers] = useState(false); // State to manage user authentication status
+
   return (
     <>
-      <NavBar />
+      <NavBar /> {/* Navigation bar component */}
       <Routes>
+        {/* Define route for home page */}
         <Route path="/" element={<HomePage />} />
-        <Route path="/signin" element={<SignIn setUsers={setUsers}/>}/>
+        {/* Define route for sign-in page with setUsers prop */}
+        <Route path="/signin" element={<SignIn setUsers={setUsers} />} />
+        {/* Define route for individual product page with dynamic id */}
         <Route path="/product/:id" element={<ProductPage />} />
+        {/* Define route for products by category page with dynamic category id */}
         <Route path="/category/:id/products" element={<ProductsByCategory />} />
+        {/* Define route for cart page */}
         <Route path="/cart" element={<Cart />} />
       </Routes>
-      <Footer/>
+      <Footer /> {/* Footer component */}
     </>
   );
 }

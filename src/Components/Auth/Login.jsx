@@ -4,7 +4,8 @@ import { db } from "../../firebase";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
-const Login = ({setUsers}) => {
+// Login component
+const Login = ({ setUsers }) => {
   // State to manage form inputs
   const [userData, setUserData] = useState({
     email: "",
@@ -24,6 +25,7 @@ const Login = ({setUsers}) => {
     checkUserCredentials();
   };
 
+  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUserData({ ...userData, [name]: value });
@@ -42,7 +44,7 @@ const Login = ({setUsers}) => {
     });
   };
 
-    // Check user credentials
+  // Check user credentials
   const checkUserCredentials = async () => {
     await getAllUsers(); // Wait for getAllUsers to complete
   
@@ -67,9 +69,9 @@ const Login = ({setUsers}) => {
       });
       localStorage.setItem("user", JSON.stringify(foundUser));
       setUserData({
-        email : "",
-        password : ""
-      })
+        email: "",
+        password: "",
+      });
       setUsers(true); // Set user status to logged in
       navigate('/'); // Redirect to home page
     } else {
@@ -81,6 +83,7 @@ const Login = ({setUsers}) => {
     }
   };
   
+  // JSX for login form
   return (
     <>
       <form action="" onSubmit={handleSubmit} autoComplete="off">

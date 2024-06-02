@@ -84,7 +84,4 @@ const footLinks = [
   { id: 25, name: "Delete Account", path: "/" },
 ];
 
-
-export { navLinks,
-    footLinks
- };
+export { navLinks, footLinks };
